@@ -1,0 +1,90 @@
+.container{
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row {
+    margin-top: 5px;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35)
+}
+.initial{
+    color: red;
+}
+.row>span{
+    font-family: Nunito;
+    font-weight: bold;
+}
+
+.filters {
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchArea {
+    width: 95%;
+    height: 30px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+}
+
+.searchArea>input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    padding-top: 10px;
+    transform: translateY(1%); 
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out; 
+}
+
+.active > select {
+    border-radius: 5px;
+    padding-left: 5px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--light-grey);
+    height: 50px;
+    width: 98%;
+}
+
+.nonActive {
+    display: none;
+
+}
+.nonActive > select {
+    border-radius: 5px;
+    padding-left: 5px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--light-grey);
+    height: 50px;
+    width: 98%;
+}

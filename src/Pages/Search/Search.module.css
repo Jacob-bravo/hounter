@@ -1,0 +1,91 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.rowHeader {
+    width: 95%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardContainer {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+}
+
+.image {
+    padding-left: 3px;
+    position: relative;
+}
+
+.image>i {
+    font-size: 24px;
+    top: 3%;
+    right: 8%;
+    position: absolute;
+    color: white;
+}
+
+.image>img {
+    border-radius: 10px;
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.info {
+    display: flex;
+    font-family: nunito;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.info>:nth-child(1) {
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.info>:nth-child(3) {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.more {
+    margin-top: 20px;
+    position: relative;
+    background-color: red;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    background: var(--grey);
+    width: 120px;
+
+}
+
+.circle {
+    position: absolute;
+    width: 30px;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background: var(--grey);
+}
