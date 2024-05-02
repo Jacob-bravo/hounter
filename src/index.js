@@ -7,22 +7,23 @@ import {
 import './index.css';
 import Layout from './Components/Layout/Layout';
 import Home from './Pages/Home/Home';
-import Search from './Pages/Search/Search';
+import Detail from './Pages/Detail/Detail';
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
         path: '/',
         element: <Home />,
       },
-      {
-        path: '/search',
-        element: <Search />,
-      },
-    ]
+    ],
+  },
+  {
+    path: '/detail/:id',
+    element: <Detail />,
   },
 ]);
 

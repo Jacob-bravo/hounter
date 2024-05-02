@@ -1,9 +1,13 @@
 :root {
-  --grey: rgb(160, 160, 160);
+  --background: rgba(255, 255, 255, 1);
+  --grey: rgba(165, 165, 165, 1);
+  --blue: rgba(109, 104, 255, 1);
+  --light-purple: rgba(246, 246, 254, 1);
   --light-grey: rgb(235, 235, 235);
 
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito';

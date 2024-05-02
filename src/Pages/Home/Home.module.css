@@ -1,9 +1,37 @@
 .container {
     width: 100%;
     height: 100%;
-    overflow: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    overflow: auto;
 
+}
+.categories{
+    padding: 0 0 10px 10px;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+}
+.categories>span{
+    font-size: 20px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+.roomtypeList{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.typeHouse{
+    padding: 7px;
+    border-radius: 15px;
+    background-color: var(--light-purple);
+}
+.list {
+    width: 95%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
 }
