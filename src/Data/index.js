@@ -18,19 +18,3 @@ export const PriceRange = [
     '12,000-16,000 KSH',
     '16,0000-20,000 KSH'
 ];
-
-export const Navigation = [
-    {
-        title: "Home",
-        icon: <i class="uil uil-estate"></i>
-    },
-    {
-        title: "Favorite",
-        icon: <i class="uil uil-heart"></i>
-    }, 
-    {
-        title: "Profile",
-        icon: <i class="uil uil-user-circle"></i>
-    }
-
-]

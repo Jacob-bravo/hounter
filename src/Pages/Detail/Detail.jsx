@@ -1,15 +1,19 @@
 import React from 'react'
 import css from "./Detail.module.css"
 import Rounded from '../../Components/RoundedBtn/Rounded'
+import { useNavigate } from 'react-router-dom'
 
 const Detail = () => {
+    const navigate = useNavigate();
     const url = 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGVtcHR5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D';
     return (
         <div className={css.container}>
             <div className={css.column}>
                 {/* navigation */}
                 <div className={css.row}>
-                    <Rounded icon={<i class="uil uil-arrow-left"></i>} />
+                    <Rounded icon={<i class="uil uil-arrow-left"></i>} onClick={() => {
+                        navigate(-1);
+                    }} />
                     <Rounded icon={<i class="uil uil-heart-alt"></i>} />
                 </div>
                 {/* house details */}
@@ -18,7 +22,7 @@ const Detail = () => {
                     <div className={css.descriptionCard}>
                         {/* dots per image index */}
                         <div className={css.imageIndex}>
-                            
+
                         </div>
                         {/* card detail */}
                         <div className={css.card}>
@@ -40,17 +44,17 @@ const Detail = () => {
                     </div>
                 </div>
                 {/* call to action */}
-      
+
             </div>
             <div className={css.actionBtn}>
-                    <div className={css.book}>
-                        <i class="uil uil-bookmark"></i>
-                        <span>Book a visit</span>
-                    </div>
-                    <div className={css.view}>
-                    <i class="uil uil-rotate-360"></i>
-                    </div>
+                <div className={css.book}>
+                    <i class="uil uil-bookmark"></i>
+                    <span>Book a visit</span>
                 </div>
+                <div className={css.view}>
+                    <i class="uil uil-rotate-360"></i>
+                </div>
+            </div>
         </div>
     )
 }

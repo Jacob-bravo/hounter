@@ -89,7 +89,7 @@
     background-color: var(--light-purple);
 }
 .actionBtn{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 60px;
     display: flex;
