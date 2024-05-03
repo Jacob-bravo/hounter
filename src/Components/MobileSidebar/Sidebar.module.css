@@ -65,6 +65,9 @@
 
 .submit {
     width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 8px;
     border-radius: 20px;
     background-color: var(--light-purple);
@@ -74,6 +77,7 @@
 }
 .submit>input {
     border: none;
+    width: 200px;
     padding-left: 10px;
     background-color: transparent;
     outline: none;
