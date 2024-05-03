@@ -11,6 +11,7 @@
 .bottomSheet.open {
     border-top: 1px solid var(--grey);
     height: 92.5vh;
+    transition: transform 0.3s ease;
     transform: translateY(0);
 }
 
@@ -40,7 +41,13 @@
     gap: 10px;
 }
 
-.column>span {
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.row>span {
     font-weight: bold;
     font-size: 25px;
     margin-top: 10px;

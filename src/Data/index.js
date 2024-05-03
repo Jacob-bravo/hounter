@@ -18,3 +18,9 @@ export const PriceRange = [
     '12,000-16,000 KSH',
     '16,0000-20,000 KSH'
 ];
+
+export const Links=[
+    'BLOGS.',
+    'ABOUT US.',
+    'CONTACT US',
+]
