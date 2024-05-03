@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import css from "./Navbar.module.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { setIndex } from "../../ReducerAction/reducerAction"
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    const [keyword, setKeyword] = useState("");
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const index = useSelector((state) => state.index.index);
     const showFilters = () => {
@@ -25,6 +28,14 @@ const Navbar = () => {
             dispatch(setIndex(0));
         }
     }
+    const navigateToSearch = (e) => {
+        setKeyword(e.target.value);
+        if (keyword.length > 1) {
+            navigate(`/search`);
+        } else {
+            navigate(`/`)
+        }
+    }
     return (
         <div className={css.container}>
             <div className={css.column}>
@@ -35,7 +46,7 @@ const Navbar = () => {
                         <span>Home search Simplified</span>
                     </div>
                     <div className={css.filter}>
-                        <i class={index!==2?"uil uil-create-dashboard":"uil uil-times"} onClick={showSidebar}></i>
+                        <i class={index !== 2 ? "uil uil-create-dashboard" : "uil uil-times"} onClick={showSidebar}></i>
                     </div>
                 </div>
 
@@ -43,7 +54,7 @@ const Navbar = () => {
 
                 <div className={css.searchbar}>
                     <div className={css.row}>
-                        <input type="text" placeholder='I am looking for...' />
+                        <input type="text" placeholder='I am looking for...' onChange={(e) => navigateToSearch(e)} value={keyword} />
                         <i class="uil uil-sliders-v-alt" onClick={showFilters}></i>
                     </div>
                 </div>

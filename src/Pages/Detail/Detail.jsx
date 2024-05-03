@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import css from "./Detail.module.css"
 import Rounded from '../../Components/RoundedBtn/Rounded'
 import { useNavigate } from 'react-router-dom'
+import Rodal from "rodal";
+import "rodal/lib/rodal.css";
 
 const Detail = () => {
+    const [modal, setModal] = useState({ visible: false });
     const navigate = useNavigate();
     const url = 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGVtcHR5JTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D';
+    const customStyles = {
+        background: "var(--background)",
+        padding: "20px ",
+        width: "80%",
+        top: "-3rem",
+        height: "fit-content",
+        maxWidth: "90%",
+    };
+    const setSchedule=()=>{
+        setModal({visible:true});
+    }
     return (
         <div className={css.container}>
             <div className={css.column}>
@@ -43,11 +57,10 @@ const Detail = () => {
                         </div>
                     </div>
                 </div>
-                {/* call to action */}
-
             </div>
+            {/* call to action */}
             <div className={css.actionBtn}>
-                <div className={css.book}>
+                <div className={css.book} onClick={setSchedule}>
                     <i class="uil uil-bookmark"></i>
                     <span>Book a visit</span>
                 </div>
@@ -55,6 +68,50 @@ const Detail = () => {
                     <i class="uil uil-rotate-360"></i>
                 </div>
             </div>
+            {/* book schedule rodal */}
+            <Rodal
+                customStyles={customStyles}
+                visible={modal.visible}
+                onClose={() => {
+                    setModal({ visible: false });
+                }}
+            >
+                <div className={css.schedulecolumn}>
+                    <div className={css.bookRow}>
+                        Schedule your visit
+                    </div>
+                    {/* date and time */}
+                    <div className={css.dateTime}>
+                        <div className={css.rowtwo}>
+                            <span>On</span>
+                            <input type="date" />
+                        </div>
+                        <div className={css.rowtwo}>
+                            <span>From</span>
+                            <input type="time" />
+                        </div>
+                    </div>
+                    {/* contact */}
+                    <div className={css.contactInfo}>
+                        <div className={css.inputColumn}>
+                            <label>Name</label>
+                            <input type="text" placeholder='Enter your name' />
+                        </div>
+                        <div className={css.inputColumn}>
+                            <label>Phone</label>
+                            <input type="text" placeholder='Enter your number' />
+                        </div>
+                    </div>
+                    {/* Note */}
+                    <div className={css.note}>
+                        <textarea placeholder='Add notes....'></textarea>
+                    </div>
+                    {/* book button */}
+                    <button>Book now</button>
+                </div>
+
+
+            </Rodal>
         </div>
     )
 }

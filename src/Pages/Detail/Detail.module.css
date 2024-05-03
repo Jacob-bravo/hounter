@@ -129,3 +129,81 @@
     border-radius: 50%;
     height: 10px;
 }
+.schedulecolumn{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.dateTime{
+    background-color: white;
+    padding: 10px 3px;
+    background-color: var(--light-purple);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+}
+.rowtwo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.rowtwo>span{
+    padding-left: 10px;
+    align-self: flex-start;
+}
+.rowtwo>input{
+    width: 90%;
+    border: 1px solid var(--grey);
+    outline: none;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    background-color: var(--light-purple);
+    padding: 10px;
+}
+.inputColumn{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.inputColumn>input{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--grey);
+    padding-left: 5px;
+    outline: none;
+}
+.note{
+    width: 95%;
+    background-color: var(--light-purple);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+.note>textarea{
+    height: 70px;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--grey);
+    width: 93%;
+}
+.schedulecolumn>button{
+    background-color: var(--blue);
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
