@@ -10,7 +10,7 @@
 
 .bottomSheet.open {
     border-top: 1px solid var(--grey);
-    height: 92.5vh;
+    height: 100vh;
     transition: transform 0.3s ease;
     transform: translateY(0);
 }

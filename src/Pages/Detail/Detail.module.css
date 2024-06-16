@@ -184,21 +184,6 @@
     padding-left: 5px;
     outline: none;
 }
-.note{
-    width: 95%;
-    background-color: var(--light-purple);
-    padding: 10px;
-    border-radius: 10px;
-    align-items: center;
-}
-.note>textarea{
-    height: 70px;
-    padding: 8px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid var(--grey);
-    width: 93%;
-}
 .schedulecolumn>button{
     background-color: var(--blue);
     height: 50px;

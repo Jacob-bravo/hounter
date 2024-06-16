@@ -102,10 +102,7 @@ const Detail = () => {
                             <input type="text" placeholder='Enter your number' />
                         </div>
                     </div>
-                    {/* Note */}
-                    <div className={css.note}>
-                        <textarea placeholder='Add notes....'></textarea>
-                    </div>
+          
                     {/* book button */}
                     <button>Book now</button>
                 </div>
